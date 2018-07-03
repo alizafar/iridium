@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-navbar>
+     <ion-title>Welcome</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content scroll="false">
+
+  <div class="welcome-bg"></div>
+  <div class="welcome-info">
+    <div class="welcome-logo"></div>
+  </div>
+
+
+  <div padding>
+
+    <ng-template [ngIf]="!auth.loggedIn">
+      <!-- Not loading, not logged in: show login button -->
+      <h1>Welcome</h1>
+      <p>Please login to coninue.</p>
+      <button ion-button block color="primary" *ngIf="!auth.loggedIn" (click)="auth.login()">Log In</button>
+
+    </ng-template>
+
+    <!-- Not loading, logged in: show profile and logout button -->
+    <ng-template [ngIf]="auth.loggedIn">
+      <h1>Logged In</h1>
+      <p>You are logged in as {{ auth.user.name }}.</p>
+
+      <button ion-button block color="primary" (click)="goTo('DashPage')">Continue</button>
+      <button ion-button block color="danger" (click)="auth.logout()">Log Out</button>
+    </ng-template>
+
+
+
+  </div>
+
+  <!-- <ng-template [ngIf]="auth.loggedIn">
+      <ion-card *ngIf="auth.user">
+        <img [src]="auth.user.picture">
+        <ion-card-content>
+          <ion-card-title>{{ auth.user.name }}</ion-card-title>
+          <pre>{{ auth.user | json }}</pre>
+          <p>{{ auth.accessToken }}</p>
+        </ion-card-content>
+      </ion-card>
+      <button ion-button block color="danger" (click)="auth.logout()">Log Out</button>
+    </ng-template> -->
+
+
+</ion-content>

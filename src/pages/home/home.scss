@@ -1,0 +1,32 @@
+page-home {
+
+}
+
+
+.welcome-bg{
+  position: relative;
+  background-color: #434954;
+  background-size: cover;
+  height: 25%;
+  z-index: 1;
+  background-repeat: repeat-x;
+}
+
+.welcome-info{
+  position: relative;
+  z-index: 2;
+  margin-top: -80px;
+  text-align: center;
+}
+
+.welcome-logo{
+  margin: auto;
+  background: url('../assets/imgs/iridium-logo.svg') no-repeat ;
+  background-size: 100%;
+  width: 200px;
+  height: 150px;
+ 
+
+
+}
+
