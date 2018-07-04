@@ -4,7 +4,9 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
+import { DashPage } from '../pages/dash/dash';
 import { ListPage } from '../pages/list/list';
+import { OverviewPage } from '../pages/overview/overview';
 
 // Import Auth0Cordova
 import Auth0Cordova from '@auth0/cordova';
@@ -18,14 +20,21 @@ export class MyApp {
   rootPage: any = HomePage;
 
   pages: Array<{title: string, component: any}>;
+  roles: Array<{title: string, component: any}>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
+      { title: 'Welcome', component: HomePage },
+      { title: 'Dashboard', component: DashPage },  
+    ];
+
+    this.roles = [
+      { title: 'Working Attorney', component: OverviewPage },
+      { title: 'Billing Attorney', component: OverviewPage },
+      
     ];
 
     // Redirect back to app after authenticating

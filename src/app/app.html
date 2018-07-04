@@ -10,6 +10,14 @@
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
         {{p.title}}
       </button>
+
+      <ion-list-header>
+        ROLES
+      </ion-list-header>
+      <button menuClose ion-item *ngFor="let r of roles" (click)="openPage(r)">
+        {{r.title}}
+      </button>
+
     </ion-list>
   </ion-content>
 

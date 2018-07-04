@@ -1,3 +1,34 @@
 page-dash {
 
 }
+
+
+.more .label{
+
+    text-align: right;
+
+}
+
+.tile{
+
+
+}
+
+.tile .caption{
+    text-align: center;
+
+}
+
+.tile .value{
+    font-size:2em;
+    text-align: center;
+}
+
+.swiper-container{
+    overflow: visible;
+    height: 100%;
+}
+
+.swiper-pagination{
+    bottom: -20px !important;
+}

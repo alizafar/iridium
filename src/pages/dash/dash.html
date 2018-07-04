@@ -18,13 +18,101 @@
 
 <ion-content>
 
-  <ion-list>
-    <ion-list-header>
-      ROLES
-    </ion-list-header>
-    <button ion-item *ngFor="let role of roles" (click)="itemSelected(item)">
-      {{ role.roleName }}
+  <h1 padding>Dashboard</h1>
+
+  <ion-card>
+
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/imgs/WA.png">
+      </ion-avatar>
+      <h2>Working Attorney</h2>
+
+    </ion-item>
+
+
+    <ion-card-content no-padding>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6>
+            <div class="tile">
+              <div class="caption">Billable Hours</div>
+              <div class="value">1,030</div>
+            </div>
+          </ion-col>
+          <ion-col col-6>
+            <div class="tile">
+              <div class="caption">Billable Fees</div>
+              <div class="value">56,230</div>
+            </div>
+
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-12>
+              <canvas #barCanvas></canvas>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-card-content>
+
+    <button ion-item item-right class="more" (click)="goTo('OverviewPage')">
+      More
     </button>
-  </ion-list>
+
+  </ion-card>
+
+  <ion-card>
+
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/imgs/MBA.png">
+      </ion-avatar>
+      <h2>Billing Attorney</h2>
+
+    </ion-item>
+
+    <ion-card-content no-padding>
+
+        <ion-grid>
+          <ion-row>
+            <ion-col col-6>
+              <div class="tile">
+                <div class="caption">WIP Fees</div>
+                <div class="value">240,153</div>
+              </div>
+            </ion-col>
+            <ion-col col-6>
+              <div class="tile">
+                <div class="caption">AR Fees</div>
+                <div class="value">186,550</div>
+              </div>
+  
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col col-12>
+                <ion-slides pager=true>
+                  <ion-slide>
+                      <canvas #barCanvas2></canvas>
+                  </ion-slide>
+                  <ion-slide>
+                      <canvas #barCanvas3></canvas>
+                  </ion-slide>
+                </ion-slides>
+                
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+  
+      </ion-card-content>
+
+    <button ion-item item-right class="more" (click)="goTo('OverviewPage')">
+      More
+    </button>
+
+  </ion-card>
 
 </ion-content>

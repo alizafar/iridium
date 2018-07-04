@@ -8,6 +8,7 @@ import { AuthService } from './../services/auth.service';
 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { OverviewPage } from '../pages/overview/overview';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -19,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    OverviewPage
   ],
   imports: [
     BrowserModule,
@@ -31,6 +33,7 @@ import { HttpClientModule } from '@angular/common/http';
   entryComponents: [
     MyApp,
     HomePage,
+    OverviewPage,
     ListPage
   ],
   providers: [
